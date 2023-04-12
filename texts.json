@@ -1,0 +1,54 @@
+{
+    "screens":
+        {"main_screen":{
+            "message": "Привет! Я бот, которого мы тут накодили на мастер-классе",
+            "button_lines": [
+                [
+                    {
+                        "text": "Поискать в Яндексе",
+                        "url": "https://ya.ru"
+                    }
+                ],
+                [
+                    {
+                        "text":"Сменить меню",
+                        "type": "change_screen",
+                        "value": "second_screen"
+                    },
+                    {
+                        "text":"Написать сообщение",
+                        "type": "send_message",
+                        "value": "faq1"
+                    }
+                ],
+                [
+                    {
+                        "text":"Подписаться/отписаться",
+                        "type": "subscribe"
+                    }
+                ]
+            ]
+        },
+        "second_screen": {
+            "message": "Тут совсем ничего нет, давай вернемся",
+            "button_lines":[
+                [
+                    {
+                        "text":"Давай",
+                        "type": "change_screen",
+                        "value": "main_screen"
+                    }
+                ]
+            ]
+        }
+    },
+    "messages":{
+        "faq1": "Ну давай, нажми еще раз что ли",
+        "reminder": "Соскучился, просто напоминаю о себе",
+        "subscribe": "Вы записались",
+        "unsubscribe": "Вы отписались"
+    },
+    "errors":{
+        "not_implemented": "Функция пока на этапе разработки (больше туда не нажимай)"
+    }
+}
